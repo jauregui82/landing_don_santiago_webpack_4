@@ -1,0 +1,164 @@
+append config
+
+header
+	#mySidenav.sidenav
+		.nav-logo
+			a(href="./")
+				img.logo-page(src=`${path_logo}`, alt="")
+				img.logo-favicon(src=`${favicon}`, alt="")
+		ul.nav-admin
+			li.menu-item
+				a(href="#", class=`menu-link ${menuNivel==="1" ? "active": ""}`)
+					i.fa.fa-left.fa-files-2
+					|	ARTES
+					span.letter
+						i.fa.fa-menu.fa-files-2
+					i.fa.fa-caret-down
+				ul(class=`sub-menu ${menuNivel==="1" ? "collapse": ""}`)
+					li
+						a(href="#", class='item-first') ARTES
+					li
+						a(href="./biblioteca.html", class=`${paginaActual==="biblioteca" ? "active": ""}`) Biblioteca
+					li
+						a(href="./user-biblioteca.html", class=`${paginaActual==="user-biblioteca" ? "active": ""}`) Biblioteca (Usuario)
+
+			li.menu-item
+				a(href="#", class=`menu-link ${menuNivel==="2" ? "active": ""}`)
+					i.fa.fa-left.fa-users-outline
+					|	PERSONAL
+					span.letter
+						i.fa.fa-menu.fa-users-outline
+					i.fa.fa-caret-down
+				ul(class=`sub-menu ${menuNivel==="2" ? "collapse": ""}`)
+					li
+						a(href="#", class='item-first') PERSONAL
+					li
+						a(href="listado-de-personal.html", class=`${paginaActual==="listado-de-personal" ? "active": ""}`) Listado de Personal
+					li
+						a(href="asistencia-de-personal.html", class=`${paginaActual==="asistencia-de-personal" ? "active": ""}`) Asistencia de Personal
+
+			li.menu-item
+				a(href="#", class=`menu-link ${menuNivel==="3" ? "active": ""}`)
+					i.fa.fa-left.fa-files
+					|	FORMULARIOS
+					span.letter
+						i.fa.fa-menu.fa-files
+					i.fa.fa-caret-down
+				ul(class=`sub-menu ${menuNivel==="3" ? "collapse": ""}`)
+					li
+						a(href="#", class='item-first') FORMULARIOS
+					li
+						a(href="bandeja-de-solicitudes.html", class=`${paginaActual==="bandeja-de-solicitudes" ? "active": ""}`) Bandeja de solicitudes
+					li
+						a(href="user-bandeja-de-solicitudes.html", class=`${paginaActual==="user-bandeja-de-solicitudes" ? "active": ""}`) Bandeja de solicitudes (Usuario)
+					li
+						a(href="solicitar-vacaciones.html", class=`${paginaActual==="solicitar-vacaciones" ? "active": ""}`) Solicitar Vacaciones
+					li
+						a(href="solicitar-permisos-personales.html", class=`${paginaActual==="solicitar-permisos-personales" ? "active": ""}`) Solicitar Permisos Personales
+					li
+						a(href="solicitar-justificacion.html", class=`${paginaActual==="justificacion-inasistencia-laboral" ? "active": ""}`) Justificación de Inasistencias
+
+			li.menu-item
+				a(href="#", class=`menu-link ${menuNivel==="4" ? "active": ""}`)
+					i.fa.fa-left.fa-users
+					|	USUARIOS
+					span.letter
+						i.fa.fa-menu.fa-users
+					i.fa.fa-caret-down
+				ul(class=`sub-menu ${menuNivel==="4" ? "collapse": ""}`)
+					li
+						a(href="#", class='item-first') USUARIOS
+					li
+						a(href="listado-de-usuario.html", class=`${paginaActual==="listado-de-usuario" ? "active": ""}`) Listado de Usuarios
+					//- li
+					//- 	a(href="reporte-de-usuario.html", class=`${paginaActual==="reporte-de-usuario" ? "active": ""}`) Reporte de Usuarios
+
+			li.menu-item
+				a(href="#", class=`menu-link ${menuNivel==="5" ? "active": ""}`)
+					i.fa.fa-left.fa-file-text
+					|	FORMATOS
+					span.letter
+						i.fa.fa-menu.fa-file-text
+					i.fa.fa-caret-down
+				ul(class=`sub-menu ${menuNivel==="5" ? "collapse": ""}`)
+					li
+						a(href="#", class='item-first') FORMATOS
+					li
+						a(href="formatos.html", class=`${paginaActual==="formatos" ? "active": ""}`) Formatos
+					li
+						a(href="user-formatos.html", class=`${paginaActual==="user-formatos" ? "active": ""}`) Formatos (Usuario)
+
+			li.menu-item
+				a(href="#", class=`menu-link ${menuNivel==="6" ? "active": ""}`)
+					i.fa.fa-left.fa-rocket
+					|	APPS
+					span.letter
+						i.fa.fa-menu.fa-rocket
+					i.fa.fa-caret-down
+				ul(class=`sub-menu ${menuNivel==="6" ? "collapse": ""}`)
+					li
+						a(href="#", class='item-first') APPS
+					li
+						a(href="chat.html", class=`${paginaActual==="chat" ? "active": ""}`) Chat
+
+			li.menu-item
+				a(href="#", class=`menu-link ${menuNivel==="7" ? "active": ""}`)
+					i.fa.fa-left.fa-widget
+					|	CONFIGURACIÓN
+					span.letter
+						i.fa.fa-menu.fa-widget
+					i.fa.fa-caret-down
+				ul(class=`sub-menu ${menuNivel==="7" ? "collapse": ""}`)
+					li
+						a(href="#", class='item-first') CONFIGURACIÓN
+					li
+						a(href="menu.html", class=`${paginaActual==="menu" ? "active": ""}`) Menú
+					li
+						a(href="accesos.html", class=`${paginaActual==="accesos" ? "active": ""}`) Accesos
+
+	#nav-admin-toggle.nav-admin-top.nav-admin-toggle
+		.navbar
+			span.burguerNav ☰
+
+			span#hour.hour
+
+			ul.navbar-top-options
+				li
+					a(href="#")
+						i.fa.fa-bell
+				li
+					a#sidebar-chat(href="#")
+						i.fa.fa-comment
+
+
+
+			//- span#hour.hour
+			//- h2
+		.content-nav-img-user
+			#dropdownBtn.dropdownBtn
+				img.nav-img-user(src="./assets/images/user.png", alt="")
+				i.fa.fa-chevron-down
+			#dropdownCard.content-box.shadow
+				.content-box-header
+					h2.py-2 Usuario
+					//- ul.list-options-user
+						li
+							a(href="#")
+								i.fa.fa-user
+						li
+							a(href="#")
+								i.fa.fa-widget
+						li
+							a(href="#")
+								i.fa.fa-power-off
+					//- h2 Usuario
+				.content-box-boddy
+					ul
+						li
+							a(href="profile.html")
+								i.fa.fa-user &nbsp;
+								|- Perfil
+						li
+							a(href="#")
+								i.fa.fa-power-off &nbsp;
+								|- Salir

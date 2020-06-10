@@ -1,0 +1,83 @@
+/*
+  This boilerplate is based in ITCSS and SMACSS
+*/
+
+// Font Awesome
+// @import "node_modules/font-awesome/scss/font-awesome";
+
+// Bootstrap
+	@import "node_modules/bootstrap/scss/functions";
+	@import "node_modules/bootstrap/scss/variables";
+
+	// @import "node_modules/animate.css/animate.min.css";
+
+
+	// Config
+	@import "./config/_fonts";
+	@import "./config/_variables";
+
+	// Bootstrap Use
+	@import "node_modules/bootstrap/scss/mixins";
+	@import "node_modules/bootstrap/scss/utilities";
+	@import "node_modules/bootstrap/scss/grid";
+	@import "node_modules/bootstrap/scss/tables";
+
+// Base
+@import './base/_reset';
+
+
+// Utils
+@import './utils/_mixins';
+@import './utils/_keyframes';
+@import './utils/_commons';
+@import './utils/_customs';
+
+// Components
+@import './components/_buttons';
+@import './components/_inputs';
+@import './components/_modal';
+@import './components/_cards';
+@import './components/_validation';
+@import './components/_loader';
+@import './components/_table';
+@import './components/_tabs';
+@import './components/_upload';
+
+@import './components/_sweetalert';
+@import './components/_flatpickr';
+
+@import './components/_inputs-date';
+
+@import './components/_admin-content';
+@import './components/_menu-admin';
+@import './components/_menu';
+@import './components/_toggle-menu';
+@import './components/_main-admin';
+@import './components/_preview-images';
+@import './components/_login';
+@import './components/_ballons';
+@import './components/_icons';
+// @import './components/_icon';
+@import './components/_checkbox';
+@import './components/_select-multiple';
+@import './components/_search';
+@import './components/_sidebar-right';
+@import './components/_swiper';
+
+// Layout
+@import './layout/_general';
+@import './layout/_page';
+
+// Pages
+// @import './pages/_all';
+@import './pages/_index';
+// @import './pages/_biblioteca';
+// @import './pages/_asistencia-personal';
+// @import './pages/_reporte-asistencia';
+// @import './pages/_solicitar-permisos-personales';
+// @import './pages/_chat';
+// @import './pages/_menu';
+// @import './pages/_accesos';
+
+
+

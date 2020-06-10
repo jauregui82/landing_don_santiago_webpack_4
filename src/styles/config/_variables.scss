@@ -1,0 +1,114 @@
+// COLORS
+	$my-colors: (
+	 	color1: #140B0A,
+	 	color2: #96694C,
+	 	color3: #f04e23,
+	 	color4: #ffb71b,
+	 	color5: #5b2b82,
+	 	color6: #E9E9EA,
+	 	color7: #FEDF87,
+	 	white-light: #F0F0F0,
+		default: #bdc3c7,
+		primary: #3498db,
+		success: #01864D,
+		info:		 #1abc9c,
+		warning: #f1c40f,
+		danger:  #e74c3c,
+		text-color: #333333,
+		dark-color: #282d31,
+		border-color: #efefef,
+    color-main: #f4f4f4,
+    facebook: #4b64a6,
+    twitter:#0dace3,
+	);
+
+	.bg-white{ background-color: #fff; }
+
+	// IMPRIMIR COLORES
+	@each $color, $value in $my-colors{
+		.#{$color}{
+			color: $value;
+		}
+		.#{$color}-force{
+			color: $value !important;
+		}
+		.bg-#{$color}{
+			background-color: $value;
+		}
+		.bg-#{$color}-force{
+			background-color: $value !important;
+		}
+	}
+
+// LAYOUT
+	// GRID
+	$grid-breakpoints: (
+	  // Extra small screen / phone
+	  xs: 0,
+	  // Small screen / phone
+	  ss: 415px,
+
+	  sm: 576px,
+	  // Medium screen / tablet
+	  md: 768px,
+	  // Large screen / desktop
+	  lg: 992px,
+
+	  xlg: 1025px,
+	  // Extra large screen / wide desktop
+	  xl: 1200px,
+	  // Super Extra large screen / wide desktop
+	  xxl: 1366px,
+
+	  xxxl: 1920px
+	);
+
+	// CONTAINERS
+	$container-max-widths: (
+	  sm: 540px,
+	  md: 720px,
+	  lg: 960px,
+	  xl: 1140px,
+		xxl: 1240px,
+		xxxl: 1440px
+	);
+
+
+// ANCHO DE FUENTES
+$weight-n: 400;
+$weight-m: 500;
+$weight-b: 700;
+
+// Z-INDEX
+$z-normal: 1;
+$z-tooltip: 10;
+$z-fixed: 100;
+$z-modal: 1000;
+
+
+$gutter-top-main: 11rem;
+$gutter-menu: 1.35rem 0 1rem;
+$gutter-header: 6.56rem;
+$gutter-footer: 7.25rem;
+
+$logo-bird-width: 760px;
+$logo-bird-height: 160px;
+
+
+// TYPOGRAPHY
+$typography_body: $GothamBook;
+$typography_header_title: $GothamBook;
+$typography_title: $GothamBold;
+$typography_subtitle: $GothamBold;
+$typography_button: $GothamBook;
+$typography_button_menu: $GothamBold;
+$typography_text: $GothamBook;
+
+// Ballons
+$gps-burg:   rgba(182, 15, 97, 0.9);
+$gps-orange: rgba(242, 112, 45, 0.9);
+$gps-skyblue:rgba(45, 181, 167, 0.9);
+$gps-purple: rgba(190, 61, 244, 0.9);
+$gps-green:  rgba(180, 224, 67, 0.9);
+$gps-yellow: rgba(242, 194, 58, 0.9);
+

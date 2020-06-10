@@ -1,0 +1,29 @@
+append config
+
+aside#sidebar-right.sidebar-right
+	.sidebar-chat
+		.sidebar-chat__header
+			h4 Chat
+		.sidebar-chat__search.mt-2
+			.form-group.form-group-search
+				input.form-control.input-chat(type="text", placeholder="Buscar en conectados")
+				i.fa.fa-search
+		.sidebar-chat__body.mt-3.pt-3
+			.chat-list
+				.user-single
+					.icon-box-header
+						.circle-icon-header.user-conex
+							.circle-img
+								img(src='./assets/images/user.png')
+						.info-icon-header
+							span Jerome Sallee
+							span.info-light @jerome
+				.user-single
+					.icon-box-header
+						.circle-icon-header.user-conex.user--disconnect
+							.circle-img
+								img(src='./assets/images/user.png')
+						.info-icon-header
+							span Jerome Sallee
+							span.info-light @jerome
+

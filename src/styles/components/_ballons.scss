@@ -1,0 +1,292 @@
+
+.cotent-ballons{
+    width: 100%;
+    min-height: 333px;
+    padding: 10px;
+    margin: 0 auto;
+    // background: #f5f5f51c;
+    position: relative;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+
+  span {
+    font-size: 4.8em;
+    color: white;
+    position: relative;
+    top: 30px;
+    left: 50%;
+    margin-left: -27px;
+    text-transform: uppercase;
+  }
+
+  ul {
+
+    position: relative;
+    top: 42%;
+    text-align: center;
+    color: $gps-burg;
+    font-size: 3.5em;
+    text-transform: uppercase;
+    display: none;
+    &.show{
+      display: block;
+    }
+  }
+}
+
+.balloon {
+  width: 738px;
+  margin: 0 auto;
+  padding-top: 30px;
+  position: relative;
+  display: none;
+  min-height: 238px;
+  div{
+    width:104px;
+    height:140px;
+    background: $gps-burg;
+    border-radius:0;
+    border-radius:80% 80% 80% 80%;
+    margin: 0 auto;
+    position: absolute;
+    padding:10px;
+    box-shadow:inset 17px 7px 10px $gps-burg;
+    -webkit-transform-origin: bottom center;
+    &:nth-child(1){
+      background: $gps-burg;
+      left: 0;
+      box-shadow:inset 10px 10px 10px darken($gps-burg, 10%);
+      animation:balloon1 6s ease-in-out infinite;
+      &:before {
+        color: $gps-burg ;
+      }
+    }
+    &:nth-child(2){
+      background: $gps-orange;
+      left: 120px;
+      box-shadow:inset 10px 10px 10px darken($gps-orange, 10%);
+      animation:balloon2 6s ease-in-out infinite;
+      &:before {
+      color: $gps-orange ;
+      }
+    }
+    &:nth-child(3){
+      background: $gps-skyblue;
+      left: 240px;
+      box-shadow:inset 10px 10px 10px darken($gps-skyblue, 10%);
+      animation:balloon4 6s ease-in-out infinite;
+      &:before {
+       color: $gps-skyblue ;
+      }
+    }
+    &:nth-child(4){
+      background: $gps-purple;
+      left: 360px;
+      box-shadow:inset 10px 10px 10px darken($gps-purple, 10%);
+      animation:balloon1 5s ease-in-out infinite;
+      &:before {
+       color: $gps-purple ;
+      }
+    }
+    &:nth-child(5){
+      background: $gps-green;
+      left: 480px;
+      box-shadow:inset 10px 10px 10px darken($gps-green, 10%);
+      animation:balloon3 5s ease-in-out infinite;
+      &:before {
+       color: $gps-green ;
+      }
+    }
+    &:nth-child(6){
+      background: $gps-yellow;
+      left: 600px;
+      box-shadow:inset 10px 10px 10px darken($gps-yellow, 10%);
+      animation:balloon2 3s ease-in-out infinite;
+      &:before {
+       color: $gps-yellow ;
+      }
+
+    }
+    &::before {
+      color:$gps-burg;
+      position:absolute;
+      bottom:-11px;
+      left: 52px;
+      content:"▲";
+      font-size:1em;
+    }
+  }
+  &.show{
+    display: block;
+  }
+}
+
+
+@include to-sm(){
+  .cotent-ballons{
+    min-height: 239px;
+    span {
+      font-size: 2.8em;
+      top: 17px;
+      left: 50%;
+      margin-left: -23px;
+    }
+
+    ul {
+      top: 30%;
+      font-size: 1.5em;
+    }
+  }
+  .balloon {
+    left: 80%;
+    transform: translateX(-50%);
+    min-height: 139px;
+    div{
+      width: 72px;
+      height: 95px;
+      &:nth-child(1){
+        left: 0;
+      }
+      &:nth-child(2){
+        // left: 57px;
+        left: 10%;
+      }
+      &:nth-child(3){
+        // left: 134px;
+        left: 20%;
+      }
+      &:nth-child(4){
+        // left: 209px;
+        left: 30%;
+      }
+      &:nth-child(5){
+        // left: 294px;
+        left: 40%;
+      }
+      &:nth-child(6){
+        // left: 353px;
+        left: 50%;
+      }
+      &::before {
+        bottom: -3px;
+      }
+    }
+  }
+}
+@include to-ss(){
+  .cotent-ballons{
+    span {
+      font-size: 2.2em;
+      top: 8%;
+      left: 68%;
+    }
+
+    h1 {
+      top: 30%;
+      font-size: 1.5em;
+    }
+  }
+  .balloon {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    div{
+      width: 51px;
+      height: 76px;
+      &:nth-child(1){
+        left: 9%;
+      }
+      &:nth-child(2){
+        // left: 57px;
+        left: 26%;
+      }
+      &:nth-child(3){
+        // left: 134px;
+        left: 40%;
+      }
+      &:nth-child(4){
+        // left: 209px;
+        left: 53%;
+      }
+      &:nth-child(5){
+        // left: 294px;
+        left: 66%;
+      }
+      &:nth-child(6){
+        // left: 353px;
+        left: 75%;
+      }
+      &::before {
+        bottom: 0px;
+        left: 38px;
+      }
+    }
+  }
+}
+
+// .balloon > div:nth-child(1){
+//   background: $gps-burg;
+//   left: 0;
+//   box-shadow:inset 10px 10px 10px darken($gps-burg, 10%);
+//   animation:balloon1 6s ease-in-out infinite;
+//   &:before {
+//    color: $gps-burg ;
+//   }
+
+// }
+// .balloon > div:nth-child(2){
+//   background: $gps-orange;
+//   left: 120px;
+//   box-shadow:inset 10px 10px 10px darken($gps-orange, 10%);
+//   animation:balloon2 6s ease-in-out infinite;
+//   &:before {
+//    color: $gps-orange ;
+//   }
+
+// }
+// .balloon > div:nth-child(3){
+//   background: $gps-skyblue;
+//   left: 240px;
+//   box-shadow:inset 10px 10px 10px darken($gps-skyblue, 10%);
+//   animation:balloon4 6s ease-in-out infinite;
+//   &:before {
+//    color: $gps-skyblue ;
+//   }
+
+// }
+// .balloon > div:nth-child(4){
+//   background: $gps-purple;
+//   left: 360px;
+//   box-shadow:inset 10px 10px 10px darken($gps-purple, 10%);
+//   animation:balloon1 5s ease-in-out infinite;
+//   &:before {
+//    color: $gps-purple ;
+//   }
+// }
+// .balloon > div:nth-child(5){
+//   background: $gps-green;
+//   left: 480px;
+//   box-shadow:inset 10px 10px 10px darken($gps-green, 10%);
+//   animation:balloon3 5s ease-in-out infinite;
+//   &:before {
+//    color: $gps-green ;
+//   }
+// }
+// .balloon > div:nth-child(6){
+//   background: $gps-yellow;
+//   left: 600px;
+//   box-shadow:inset 10px 10px 10px darken($gps-yellow, 10%);
+//   animation:balloon2 3s ease-in-out infinite;
+//   &:before {
+//    color: $gps-yellow ;
+//   }
+// }
+// .balloon > div:before {
+//   color:$gps-burg;
+//   position:absolute;
+//   bottom:-11px;
+//   left: 52px;
+//   content:"▲";
+//   font-size:1em;
+// }

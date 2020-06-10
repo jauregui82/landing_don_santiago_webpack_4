@@ -1,0 +1,50 @@
+include ../config/variables
+
+//- Master layout
+doctype html
+html(lang='es')
+	head
+
+		//- Meta
+		meta(charset='UTF-8')
+		meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0")
+		//- meta(name="viewport" content="width=device-width, initial-scale=1")
+		meta(http-equiv='X-UA-Compatible', content='ie=edge,IE=9,IE=10,IE=11')
+
+		//- Chrome, Firefox y Opera
+		meta(name='theme-color', content=`${theme_color}`)
+
+		//- iOS Safari
+		meta(name='apple-mobile-web-app-status-bar-style', content=`${theme_color}`)
+
+		//- Windows Phone
+		meta(name='msapplication-navbutton-color', content=`${theme_color}`)
+
+		//- Data Page
+		title LOGIN - INTRANET "LA AGENCIA"
+		meta(name="description" content=`${descripcion}`)
+		meta(name='autor', content=`${autor}`)
+
+
+		//- Favicons
+		link(rel='apple-touch-icon', sizes='180x180', href=`${favicon}`)
+		link(rel='icon', type='image/png', sizes='32x32', href=`${favicon}`)
+		link(rel='icon', type='image/png', sizes='16x16', href=`${favicon}`)
+		link(rel='shortcut icon', href=`${favicon}`)
+
+
+	body
+		//- .loader#loader
+		//-   //- .loader__circle
+		//-   .logo-content
+		//-     .logo-bird
+		//-   img.logo-prehome(src='./assets/images/logo-text.png', alt=' Logo')
+
+
+		//- block content
+		block content
+
+		block modal
+
+		//- block scripts
+		block scripts

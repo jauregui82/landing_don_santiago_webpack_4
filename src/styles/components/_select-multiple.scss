@@ -1,0 +1,68 @@
+.content{
+  &-text-select{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .content-select-actions{
+      button{
+        padding: 0.55rem 1.5rem;
+        margin-left: 0.5rem;
+      }
+    }
+  }
+
+}
+
+.select-multiple{
+  position: relative;
+
+  .selected{
+    border: solid map-get($my-colors , success );
+    position: relative;
+  }
+
+  .card{
+    &:after{
+      background-color: rgba(0,0,0, .1);
+    }
+  }
+}
+
+@include to-lg(){
+  .content{
+    &-text-select{
+      justify-content: center;
+      flex-direction: column;
+
+      .content-select-actions{
+        button{
+          padding: 0.55rem 1.5rem;
+          margin-left: 0.5rem;
+        }
+      }
+      .content-btn-select{
+        margin-top: 0.8rem;
+      }
+    }
+
+  }
+
+}
+
+
+@include to-sm(){
+  .content{
+    &-text-select{
+      .content-select-actions{
+        display: flex;
+        flex-direction: column;
+        button{
+          margin-left: 0rem;
+        }
+      }
+    }
+
+  }
+
+}

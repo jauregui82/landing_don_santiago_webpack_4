@@ -1,0 +1,204 @@
+// .swiper-container {
+//   position: static;
+//   width: 100%;
+//   height: 100%;
+//   margin-left: auto;
+//   margin-right: auto;
+
+//   .swiper-wrapper{
+//     display: flex;
+//     transform: translate3d(0,0,0);
+//     justify-content: center;
+//   }
+
+//   &.swiper-full{
+//     height: 100vh;
+
+//     &.swiper-with-gutter-top{
+//       margin-top: $gutter-top-main;
+//       // margin-top: $gutter-top-main;
+//       height: calc(100vh - #{$gutter-top-main});
+
+//       @include to-lg(){
+//         margin-top: calc(#{$gutter-top-main} - 5rem);
+//         height: calc(100vh - #{$gutter-top-main} - 4rem);
+//       }
+//       @include to-sm(){
+//         // margin-top: -0.1rem;
+//         height: 32rem;
+//       }
+//     }
+
+//     .swiper-button-prev, .swiper-button-next{
+
+//       .fa-angle-left{
+//         left: 2rem;
+//         @include to-sm(){
+//           left: -.5rem;
+//           top: calc(50% + 1.2rem);
+//         }
+//       }
+
+//       .fa-angle-right{
+//         right: 2rem;
+//         @include to-sm(){
+//           right: -.5rem;
+//           top: calc(50% + 1.2rem);
+//         }
+//       }
+//     }
+//   }
+
+//   &.swiper-items{
+//     .swiper-button-prev, .swiper-button-next{
+
+//       .fa-angle-left{
+//         left: -2rem;
+//       }
+
+//       .fa-angle-right{
+//         right: -2rem;
+//       }
+
+//       @include to-lg(){
+//         .fa-angle-left{
+//           left: -3.5rem;
+//         }
+
+//         .fa-angle-right{
+//           right: -3.5rem;
+//         }
+//       }
+
+//       @include to(868px){
+//         .fa-angle-left{
+//           left: -1.45rem;
+//         }
+
+//         .fa-angle-right{
+//           right: -1.45rem;
+//         }
+//       }
+
+//       @include to-md(){
+//         .fa-angle-left{
+//           left: -3rem;
+//         }
+
+//         .fa-angle-right{
+//           right: -3rem;
+//         }
+//       }
+
+//       @include to(640px){
+//         .fa-angle-left{
+//           left: -2rem;
+//         }
+
+//         .fa-angle-right{
+//           right: -2rem;
+//         }
+//       }
+
+//       @include to-sm(){
+//         .fa-angle-left{
+//           left: -.5rem;
+//         }
+
+//         .fa-angle-right{
+//           right: -.5rem;
+//         }
+//       }
+
+//       @include to(540px){
+//         .fa-angle-left{
+//           left: 1.5rem;
+//         }
+
+//         .fa-angle-right{
+//           right: 1.5rem;
+//         }
+//       }
+//     }
+//   }
+
+// }
+// .swiper-slide {
+//   font-size: 1rem;
+//   text-align: center;
+//   background-color: transparent;
+//   transition-property: transform;
+//   flex-shrink: 0;
+//   width: auto!important;
+//   margin: 0 0.4rem;
+
+//   iframe{
+//     width: 100%;
+//     height: 100%;
+//   }
+//   @include to-xl(){
+//     .bg-image{
+//       &.left{
+//        background-position-x: 85%;
+//        // background-size: inherit;
+//       }
+//       &.right{
+//         background-position-x: 16%;
+//       }
+//       &.center{
+//         background-position-x: 50%;
+//       }
+//       &.event{
+//         background-position-x: 28%;
+//         // background-size: 94rem;
+//       }
+//     }
+//   }
+//   @include to-sm(){
+//     .bg-image{
+//       // &.left{
+//       //  background-position-x: 85%;
+//       //  // background-size: inherit;
+//       // }
+//       // &.right{
+//       //   background-position-x: 16%;
+//       // }
+//       // &.center{
+//       //   background-position-x: 50%;
+//       // }
+//       &.event{
+//         background-position-x: 28%;
+//         background-size: 94rem;
+//       }
+//     }
+//   }
+// }
+
+
+
+// .swiper-button-prev, .swiper-button-next{
+//   background-image: none;
+//   width: 0;
+//   height: 0;
+//   z-index: 50;
+
+//   .fa{ display: none;  }
+
+//   &[role="button"]{
+//     .fa{
+//       position: absolute;
+//       display: block;
+//       top: 50%;
+//       transform: translateY(-50%);
+//       font-size: 4rem;
+//       @extend .color1;
+//     }
+//   }
+
+//   &.swiper-button-disabled{
+//     display: none;
+//   }
+
+// }
+
+

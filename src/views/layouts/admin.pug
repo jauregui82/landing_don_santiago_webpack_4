@@ -1,0 +1,63 @@
+include ../config/variables
+
+//- Master layout
+doctype html
+html(lang='es')
+  head
+
+    //- Meta
+    meta(charset='UTF-8')
+    //- meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    //- meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(http-equiv='X-UA-Compatible', content='ie=edge,IE=9,IE=10,IE=11')
+
+    //- Chrome, Firefox y Opera
+    meta(name='theme-color', content=`${theme_color}`)
+
+    //- iOS Safari
+    meta(name='apple-mobile-web-app-status-bar-style', content=`${theme_color}`)
+
+    //- Windows Phone
+    meta(name='msapplication-navbutton-color', content=`${theme_color}`)
+
+    //- Data Page
+    title #{titulo} | #{sitio}
+
+    //- Favicons
+    link(rel='apple-touch-icon', sizes='180x180', href=`${favicon}`)
+    link(rel='icon', type='image/png', sizes='32x32', href=`${favicon}`)
+    link(rel='icon', type='image/png', sizes='16x16', href=`${favicon}`)
+    link(rel='shortcut icon', href=`${favicon}`)
+
+    link(href='https://file.myfontastic.com/n5UcyKyhusMNtVKZtTdnWQ/icons.css', rel='stylesheet')
+
+  body#body(class=`${header===false ? "login": ""}`)
+    .toggle-responsive
+    //- .loader#loader
+    //-   //- .loader__circle
+    //-   .logo-content
+    //-     .logo-bird
+    //-   img.logo-prehome(src='./assets/images/logo-text.png', alt=' Logo')
+
+
+    //- menu
+    if header
+      include ../components/menu
+
+    //- block content
+    //- main(class=`main ${header===false ? "login": ""} ${bg_admin===true ? "bg-admin": ""}`)
+    main(class=`main main-${paginaActual}`)
+      .container
+        .content-main
+          block content
+
+    //- Sidebar Right
+    //- include ../components/right-sidebar
+
+    //- Footer
+    //- include ../components/footer
+
+    //- block modal
+
+    block scripts

@@ -1,0 +1,20 @@
+.form-group-search{
+	.form-control, .fa-search{
+		font-size: .85rem;
+	}
+
+	.fa-search{
+		position: absolute;
+		top: 50%;
+		right: .85rem;
+		transform: translateY(-50%);
+		color: rgba(#000, .5);
+		padding-top: 4px;
+	}
+
+	.form-control:focus, .form-control:active{
+		& + .fa-search{
+			color: #000;
+		}
+	}
+}

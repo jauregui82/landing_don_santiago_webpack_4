@@ -1,0 +1,63 @@
+
+html{
+  background-color: #000000;;
+  // @include to-sm(){
+  //   overflow-y: hidden;
+  // }
+}
+
+body{
+  // @include scrollMinimal(darken(map-get($my-colors, color1), 7.5%), 12px);
+  @include scrollMinimal(map-get($my-colors, color2), 12px);
+  font-family: $typography_body;
+  color: #000;
+  // background-color: #f0f0f0;
+
+  &.not-overflow{
+    overflow: hidden;
+  }
+
+  &.o-hidden-y{
+    overflow-y: hidden;
+  }
+}
+
+main{
+  position: relative;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  // margin-top: 5rem;
+  // padding-top: 15px;
+  // padding-top: 1.5rem;
+
+  // margin-top: 2rem;
+  // min-height: calc(100% - #{$gutter-header} - #{$gutter-footer});
+  // min-height: calc(100%);
+
+}
+
+h1, h2, h3, h4, h5, section{
+  position: relative;
+}
+
+h1, h2, h3, h4, h5{
+  // font-family: $typography_header_title;
+}
+
+a, a:hover{
+  color: #000;
+}
+
+ul{
+  list-style: none;
+}
+
+p{
+  font-size: 1.25rem;
+  text-align: justify;
+}
+select{
+  background-color: #fff;
+}

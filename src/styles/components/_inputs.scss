@@ -1,0 +1,239 @@
+// $font-input: ;
+
+.form-control[disabled], .btn[disabled] {
+  background-color: #ddd !important;
+}
+
+.form-group{
+  position: relative;
+	margin-bottom: .75rem;
+}
+
+.form-control{
+  color: #575756;
+	background-color: #fff;
+	border-radius: 0;
+	border: 0;
+	width: 100%;
+  padding: .25rem .75rem;
+  font-size: 1rem;
+  border: 1px solid rgba(#000,.15);
+	box-shadow: none;
+	outline: 0;
+  transition: all .3s;
+
+  &:focus, &:active{
+    border: thin solid #000;
+	}
+
+  &.small{
+    max-width: 60px;
+    width: 100%;
+  }
+
+  &[disabled] {
+    background-color: #f0f0f0;
+  }
+}
+
+// BUTTONS
+
+.btn{
+	padding: .465rem 1.35rem;
+  // padding: .65rem 1.5rem;
+  position: relative;
+  width: initial;
+  border: 0;
+  color: #fff;
+  // font-family: $Archer_Semibold;
+  font-size: .85rem;
+  outline: 0;
+
+  &.w-100{
+  	width: 100%;
+  }
+
+  &-border{
+    border-radius: .45rem;
+  }
+
+  &-borde{
+    border: 1px solid #ddd;
+  }
+
+  &--theme{
+  	background-color: map-get($my-colors, color1);
+
+  	&:hover{
+  		background-color: darken(map-get($my-colors, color1), 6.5%);
+  	}
+  }
+
+  &--theme2{
+    background-color: map-get($my-colors, color2);
+
+    &:hover{
+      color: #fff;
+      background-color: darken(map-get($my-colors, color2), 6.5%);
+    }
+  }
+
+  &--grey{
+    background-color: #EAEBED;
+    color: map-get($my-colors, color1);
+
+
+    &:hover{
+      background-color: darken(#EAEBED, 6.5%);
+    }
+  }
+
+  &-medium{
+    font-size: .75rem;
+    padding: .35rem 1.25rem;
+  }
+
+  &-big{
+    font-size: 1.25rem;
+    padding: .85rem 1.5rem;
+  }
+
+  &--modal{
+    background-color: #003da4;
+    color: #fff;
+    padding: 12px 30px;
+    font-size: .875rem;
+    transition: all .3s ease;
+  }
+  &-file{
+    // max-width: 24%;
+    // width: 100%;
+    width: auto;
+    padding: .35rem 1.25rem;
+    border-radius: 0;
+    background: #003da4;
+    color: #fff;
+  }
+  &-img{
+    font-size: 15px;
+    width: 30%;
+  }
+}
+
+
+// LIST
+.unstyled {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+// CHECKBOX
+.styled-checkbox {
+  position: absolute; // take it out of document flow
+  opacity: 0; // hide it
+
+  & + label {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+  }
+
+  // Box.
+  & + label:before {
+    content: '';
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: text-top;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+  }
+
+  // Box hover
+  &:hover + label:before {
+    background-color: map-get($my-colors, success);
+  }
+
+  // Box focus
+  &:focus + label:before {
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+  }
+
+  // Box checked
+  &:checked + label:before {
+    background-color: map-get($my-colors, success);
+  }
+
+  // Disabled state label.
+  &:disabled + label {
+    color: #b8b8b8;
+    cursor: auto;
+  }
+
+  // Disabled box.
+  &:disabled + label:before {
+    box-shadow: none;
+    background-color: #ddd;
+  }
+
+  // Checkmark. Could be replaced with an image
+  &:checked + label:after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 9px;
+    background-color: #fff;
+    width: 2px;
+    height: 2px;
+    box-shadow:
+      2px 0 0 #fff,
+      4px 0 0 #fff,
+      4px -2px 0 #fff,
+      4px -4px 0 #fff,
+      4px -6px 0 #fff,
+      4px -8px 0 #fff;
+    transform: rotate(45deg);
+  }
+}
+
+
+.col-form-label{
+  display: inline-block;
+  margin-bottom: .25rem;
+}
+
+
+.group-input{
+  display: inline-block;
+}
+
+
+
+
+input[type="checkbox"]{
+  &.error + label{
+    color: red;
+  }
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before{
+  background-color: map-get($my-colors, color1) !important;
+}
+
+.custom-control-input:checked~.custom-control-label::before{
+  background-color: map-get($my-colors, color1);
+}
+
+.custom-control-label::before, .custom-control-label::after{
+  cursor: pointer;
+  top: .15rem;
+}
+
+
+.custom-checkbox{
+  max-width: 100%;
+  font-size: .85rem;
+}

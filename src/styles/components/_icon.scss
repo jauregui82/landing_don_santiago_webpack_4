@@ -1,0 +1,32 @@
+.icon-file{
+  background-size: 60%;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &.file-powerpoint{
+    background-image: url('../../assets/images/icon/powerpoint.png');
+  }
+  &.file-excel{
+    background-image: url('../../assets/images/icon/excel.png');
+  }
+  &.file-word{
+    background-image: url('../../assets/images/icon/word.png');
+  }
+  &.file-pdf{
+    background-image: url('../../assets/images/icon/pdf.png');
+  }
+  &.file-zip{
+    background-image: url('../../assets/images/icon/zip.png');
+  }
+  &.file-rar{
+    background-image: url('../../assets/images/icon/rar.png');
+  }
+  &.file-ai{
+    background-image: url('../../assets/images/icon/ai.png');
+  }
+  &.file-ps{
+    background-image: url('../../assets/images/icon/ps.png');
+  }
+}

@@ -1,0 +1,51 @@
+.sidebar-right{
+  position: fixed;
+  max-width: 285px;
+  width: 100%;
+  top: 5.2rem;
+  // right: 0;
+  right: -100%;
+  z-index: 100;
+  background-color: #fff;
+  height: calc(100vh - 5.2rem);
+  padding: 1rem;
+	border-left: 1px solid #f0f0f0;
+
+	transition: right .3s;
+
+	.sidebar-chat{
+		&__search{
+		}
+
+		&__body{
+			border-top: 1px solid #f0f0f0;
+		}
+	}
+
+	@include to-sm(){
+		max-width: 100%;
+	}
+
+	.chat-list{
+		margin-left: -1rem;
+    margin-right: -1rem;
+
+		.user-single{
+			padding: .5rem 1rem;
+			cursor: pointer;
+
+			.circle-img{
+		    width: 40px;
+		    height: 40px;
+			}
+
+			&:hover{
+				background-color: #f0f0f0;
+			}
+		}
+	}
+
+	&.toggle{
+		right: 0;
+	}
+}

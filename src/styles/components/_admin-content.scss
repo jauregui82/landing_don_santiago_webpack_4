@@ -1,0 +1,41 @@
+.upload{
+  &-img{
+    position: relative;
+    &-delete{
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: #e10613;
+      top: 3px;
+      right: 3px;
+      color: rgba(255, 255, 255, 0.8);
+      border-radius: 50%;
+      font-size: .75rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      &:hover{
+        color: #fff;
+      }
+    }
+  }
+}
+
+.users{
+  &-disabled{
+    background: #9e9fa054;
+    color: #b0b0b0;
+  }
+}
+
+.content-img{
+  &-landscape{
+    max-width: 7rem;
+    margin: auto;
+  }
+  &-portait{
+    max-width: 9rem;
+    margin: auto;
+  }
+}

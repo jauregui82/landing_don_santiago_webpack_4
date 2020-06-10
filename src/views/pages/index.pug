@@ -1,0 +1,152 @@
+
+extends ../layouts/admin
+
+append config
+	-titulo = "Don Santiago"
+	-paginaActual = "home"
+
+block content
+	section#home.home
+		.d-flex.justify-content-center.content-img-initial
+			//- img(src="./assets/images/foto-1.jpg", alt="", style="transform: scale(1.3);")
+
+	section#somos.pt-5
+		.content-text
+			.content-text-line
+			.content-text-title
+				h2.title Nueva&nbsp;Presentación
+		.mt-5
+		.content-text
+			p Don Santiago Mosto Verde, una verdadera oda al Pisco que nace en honor a nuestro fundador, Santiago Queirolo Raggio, y su infinito amor por el destilado peruano y las tradiciones.
+			br
+			br
+			p Es así como inmortalizamos el recuerdo de Don Santiago en un Pisco elaborado a partir de una selección exclusiva de uvas pisqueras de nuestros viñedos del valle de Ica de la cual obtenemos el original mosto yema que, destilado en falcas de cobre, da como resultado un espirituoso de gran volumen, carácter único y exquisita suavidad.
+			br
+			br
+			p Los invitamos a catar la tradición y experiencia de más de 130 años de pasión pisquera en una botella.
+			br
+			.content-img-firma.text-center
+				img(src="./assets/images/firma.png", alt="")
+
+	section#coleccion.py-5
+		.content-text
+			.row
+				.col-sm-4
+					.coleccion-img
+						img(src="./assets/images/coleccion/torontel1.png", alt="")
+				.col-sm-8
+					.coleccion-title
+						h3.torontel TORONTEL
+					.coleccion-text
+						P Origen:
+						P Viñas Queirolo, ICA, PERÚ.
+						P Descripción:
+						P Mosto verde destilado en falca, elaborado de uva Torontel.
+						P Nota de cata:
+						P Limpio y transparente con buena densidad. Elegante y delicado, aromas a flores blancas como lavanda y jazmín y frutas. Muy amable y suave, largo retrogusto. Tómese ligeramente frío o en cócteles.
+
+		.content-text.mt-5
+			.row
+				.col-sm-4
+					.coleccion-img
+						img(src="./assets/images/coleccion/italia1.png", alt="")
+				.col-sm-8
+					.coleccion-title
+						h3.italia ITALIA
+					.coleccion-text
+						p Origen:
+						p Viñas Queirolo, ICA, PERÚ.
+						p Descripción:
+						p El campeón nacional de los piscos mosto verde. Destilado en falca y elaborado en base a la uva Italia.
+						p Nota de cata:
+						p Transparente con reflejos plateados. Frutas blancas como manzana verde frutas tropicales y flores. Amplio en boca, retrogusto frutal. Tómese ligeramente frío o en cócteles.
+
+		.content-text.mt-5
+			.row
+				.col-sm-4
+					.coleccion-img
+						img(src="./assets/images/coleccion/quebranta1.png", alt="")
+				.col-sm-8
+					.coleccion-title
+						h3.quebranta QUEBRANTA
+					.coleccion-text
+						p Origen:
+						p Viñas Queirolo, ICA, PERÚ.
+						p Descripción:
+						p Mosto verde destilado en falca, elaborado de uva Quebranta.
+						p Nota de Cata:
+						p Transparente y limpio con reflejos color plata. Elegante, con aromas a frutas tropicales como plátano y mango, frutas secas y tostadas. Estructurado pero suave al paladar, muy largo. Tómese ligeramente frío o en cócteles.
+
+
+	section#premios.pt-5
+		.content-text
+			.premios-title.text-center
+				h2.title PREMIOS
+			.premios-slider
+				.swiper-container#slider
+					.swiper-wrapper
+						.swiper-slide
+							img(src="./assets/images/medallas/80-medalla_bronce_Pisco.png", alt="")
+						.swiper-slide
+							img(src="./assets/images/medallas/80-medalla_plata_vino.png", alt="")
+						.swiper-slide
+							img(src="./assets/images/medallas/133-medalla_gran-oro_pisco.png", alt="")
+						.swiper-slide
+							img(src="./assets/images/medallas/133-medalla_oro_pisco.png", alt="")
+						.swiper-slide
+							img(src="./assets/images/medallas/133-medalla_plata_vino-pisco.png", alt="")
+						.swiper-slide
+							img(src="./assets/images/medallas/133-MundusVini-Oro.png", alt="")
+						.swiper-slide
+							img(src="./assets/images/medallas/Concurso-Mondial-de-Bruxelles-Spirits-Selection.png", alt="")
+						.swiper-slide
+							img(src="./assets/images/medallas/Concurso-Regional-del-Pisco-Lima.png", alt="")
+						.swiper-slide
+							img(src="./assets/images/medallas/Golden-Alambique-Caracas-Venezuela.png", alt="")
+						.swiper-slide
+							img(src="./assets/images/medallas/Les-Citadelles-Du-Vin-Burdeos-Francia.png", alt="")
+					.swiper-button-prev
+						img(src="./assets/images/prev.png", alt="")
+					.swiper-button-next
+						img(src="./assets/images/next.png", alt="")
+			.premios-img
+				img(src="./assets/images/caja.png", alt="")
+
+	section#suscribete.py-5
+		.content-text
+			.suscribe-title.text-center
+				h2.title SUSCRIBETE
+			.suscribe-text.mt-4
+				p Suscribete a nuestra base de datos para ser parte de la Familia Queirolo y recibir las noticias relacionadas a la marca.
+			.suscribe-form
+				form#formSuscribe
+					.row.d-flex.justify-content-center.mt-4
+						.col-md-9.col-xl-8
+							.row
+								.col-md-4.form-group
+									label(for="") Nombre y apellido:
+								.col-md-8.form-group
+									input.w-100(type="text", name="name", onkeyup="keyUp(e=this)")
+									label.messages Debe ingresar un nombre
+								.col-md-4.form-group
+									label(for="") Correo:
+								.col-md-8.form-group
+									input.w-100(type="email", name="email", onkeyup="keyUp(e=this)")
+									label.messages Debe ingresar un email
+								.col-md-4.form-group
+									label(for="") Cumpleaños:
+								.col-md-8.form-group
+									input.w-100(type="date", name="date", onkeyup="change(e=this)")
+									label.messages Debe seleccionar la fecha de nacimiento
+								.col-md-12.form-group.text-center.text-md-right.mt-3
+									button.btn.btn--color2.px-5(type="submit") Enviar
+			.suscribe-text.mt-4
+				.row.d-flex.justify-content-center
+					.col-12.text-center.suscribe-img
+						hr
+						img(src="./assets/images/bebidas.png", alt="")
+
+
+
+
+

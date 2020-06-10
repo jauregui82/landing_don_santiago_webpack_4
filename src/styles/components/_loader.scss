@@ -1,0 +1,87 @@
+
+	$logo-bird-width: 760px;
+	$logo-bird-height: 160px;
+
+.loader{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to left,#08854e,#7cc24e,#c2d251);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+
+  &__circle {
+    width: 145px;
+    height: 145px;
+    background-color: transparent;
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    border-top: 3px solid #fff;
+    border-radius: 50%;
+    animation: spin 1.2s linear infinite;
+  }
+  &__logo {
+    position: absolute;
+    left: calc(50% - 45px);
+    top: calc(50% - 45px);
+
+  }
+}
+
+
+
+.hide{
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 1.5s, opacity 1.5s linear;
+}
+
+.logo-content{
+	position: absolute;
+	bottom: 50%;
+	left: 47%;
+	// animation: translate 10s forwards;
+	// transform: translate(100vh,-100px);
+	z-index: 10;
+}
+
+.logo-bird{
+  // background: url('../images/bird.png') repeat-x;
+  background-position: 0;
+  width: calc(#{$logo-bird-width} / 4);
+  height: #{$logo-bird-height};
+  background-position: calc(#{$logo-bird-width} / 4 * -1);
+  background-size: #{$logo-bird-width};
+  animation: walk-logo .8s steps(4) infinite, my_bounce 2.5s;
+  animation: walk-logo .8s steps(4) infinite;
+}
+
+@keyframes walk-logo {
+  0% { background-position: 0; }
+  100% { background-position: calc(#{$logo-bird-width} * -1); }
+}
+@media (min-width: 568px) and (max-width: 960px){
+	.logo-bird{
+		#{$logo-bird-width}: 720px;
+		#{$logo-bird-height}: 120px;
+	}
+}
+
+
+@keyframes translate {
+  0%{
+    transform: translate(100vh,-500px);
+  }
+ 	25%,75%,100% {
+    transform: translate(0px,0px);
+  }
+}
+
+.logo-prehome{
+	max-width: 245px;
+}

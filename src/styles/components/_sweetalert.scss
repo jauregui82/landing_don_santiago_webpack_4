@@ -1,0 +1,22 @@
+
+.swal-modal{
+
+	.swal-content{
+		margin-top: 30px;
+	}
+
+	.swal-text{
+		text-align: center;
+	}
+
+	.swal-button--confirm{
+		background-color: map-get($my-colors, success);
+		border: 0 !important;
+		transition: all .2s;
+
+		&:hover{
+			background-color: darken(map-get($my-colors, success), 5%);
+		}
+	}
+
+}

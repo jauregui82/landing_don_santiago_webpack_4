@@ -1,0 +1,77 @@
+.toggle-menu{
+  position: fixed;
+  top: .5rem;
+  right: 1rem;
+  font-size: 22px;
+  padding: 30px 17.5px;
+  // background-color: map-get($my-colors, color3);
+  color: #fff;
+  cursor: pointer;
+  z-index: $z-fixed;
+  border-radius: 50%;
+  // @include to-sm(){
+  //   position: absolute;
+  // }
+
+  .hamburger {
+    position: relative;
+    // width: 30px;
+    // height: 3px;
+    width: 34px;
+    height: 6px;
+    // background: #fff;
+    background: map-get($my-colors, color2 );
+    display: block;
+    transform-origin: center;
+    transition: .5s ease-in-out;
+    &:hover{
+      background: map-get($my-colors, color2 );
+    }
+
+    &:after,
+    &:before {
+      transition: .5s ease-in-out;
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      // background: map-get($my-colors, color1 );
+    }
+    &:before {
+      top: -11px;
+      background: map-get($my-colors, color3 );
+      // &:hover{
+        //   background: map-get($my-colors, color1 );
+        // }
+      }
+      &:after {
+      background: map-get($my-colors, color2 );
+      bottom: -11px;
+    }
+  }
+
+  &.menu-close{
+    // border-radius: 0;
+    .hamburger {
+      transform: rotate(45deg);
+      background-color: #fff;
+      height: 0.3rem;
+      width: 2.4rem;
+      &:after {
+        transform: rotate(90deg);
+        bottom: 0;
+        background-color: #fff;
+      }
+      &:before {
+        transform: rotate(90deg);
+        top: 0;
+        background-color: #fff;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(lg){
+    display: none !important;
+  }
+}
